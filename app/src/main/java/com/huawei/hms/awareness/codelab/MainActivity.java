@@ -15,7 +15,7 @@
  *
  */
 
-package com.huawei.hms.awareness.codelab;
+package com.jutaol.nearby.dinner;
 
 import android.Manifest;
 import android.content.Intent;
@@ -32,9 +32,9 @@ import androidx.core.app.ActivityCompat;
 
 import com.huawei.hmf.tasks.OnFailureListener;
 import com.huawei.hmf.tasks.OnSuccessListener;
-import com.huawei.hms.awareness.codelab.awareness.BarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.CaptureActivity;
-import com.huawei.hms.awareness.codelab.logger.LogView;
+import com.jutaol.nearby.dinner.awareness.BarrierActivity;
+import com.jutaol.nearby.dinner.awareness.CaptureActivity;
+import com.jutaol.nearby.dinner.logger.LogView;
 import com.huawei.hms.kit.awareness.Awareness;
 import com.huawei.hms.kit.awareness.capture.CapabilityResponse;
 import com.huawei.hms.kit.awareness.status.CapabilityStatus;

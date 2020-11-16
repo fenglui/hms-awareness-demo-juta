@@ -12,6 +12,10 @@
     <string name="awareness_getWeatherStatus">get Weather Status</string>
     <string name="awareness_getBluetoothStatus">get Bluetooth Status</string>
     <string name="awareness_getBeaconStatus">get Beacon Status</string>
+    <string name="awareness_getWifiStatus">get WiFi Status</string>
+    <string name="awareness_getScreenStatus">get Screen Status</string>
+    <string name="awareness_getDarkModeStatus">get DarkMode Status</string>
+    <string name="awareness_getApplicationStatus">get Application Status</string>
     <string name="awareness_deleteBarrier">delete Barrier</string>
     <string name="awareness_headsetBarrier">Headset Barrier Sample</string>
     <string name="awareness_headsetBarrier_keeping">add HeadsetBarrier(keep connected)</string>
@@ -43,6 +47,10 @@
     <string name="awareness_beaconBarrier_discover">add beaconBarrier(discover)</string>
     <string name="awareness_beaconBarrier_missed">add beaconBarrier(missed)</string>
     <string name="awareness_beaconBarrier_keep">add beaconBarrier(keep)</string>
+    <string name="awareness_wifiBarrier">WiFi Barrier Sample</string>
+    <string name="awareness_wifiBarrier_keeping">add WifiBarrier(keep connected)</string>
+    <string name="awareness_screenBarrier">Screen Barrier Sample</string>
+    <string name="awareness_screenBarrier_keeping">add ScreenBarrier(keep screenOn)</string>
     <string name="awareness_barrierCombination">Barrier Combination Sample</string>
     <string name="awareness_barrierCombination_behavior_headset">add combinedBarrier(behavior and headset)</string>
     <string name="awareness_barrierCombination_time_bluetooth">add combinedBarrier(time and bluetooth)</string>

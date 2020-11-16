@@ -15,7 +15,7 @@
  *
  */
 
-package com.huawei.hms.awareness.codelab.logger;
+package com.jutaol.nearby.dinner.logger;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

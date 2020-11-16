@@ -15,7 +15,7 @@
  *
  */
 
-package com.huawei.hms.awareness.codelab;
+package com.jutaol.nearby.dinner;
 
 import android.util.SparseArray;
 

@@ -15,7 +15,7 @@
  *
  */
 
-package com.huawei.hms.awareness.codelab.awareness.barrier;
+package com.jutaol.nearby.dinner.awareness.barrier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,9 +28,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
 
-import com.huawei.hms.awareness.codelab.R;
-import com.huawei.hms.awareness.codelab.Utils;
-import com.huawei.hms.awareness.codelab.logger.LogView;
+import com.jutaol.nearby.dinner.R;
+import com.jutaol.nearby.dinner.Utils;
+import com.jutaol.nearby.dinner.logger.LogView;
 import com.huawei.hms.kit.awareness.barrier.AwarenessBarrier;
 import com.huawei.hms.kit.awareness.barrier.BarrierStatus;
 import com.huawei.hms.kit.awareness.barrier.BluetoothBarrier;

@@ -1,0 +1,35 @@
+{
+	"agcgw":{
+		"backurl":"connect-drcn.dbankcloud.cn",
+		"url":"connect-drcn.hispace.hicloud.com"
+	},
+	"client":{
+		"appType":"1",
+		"cp_id":"2850086000376829201",
+		"product_id":"736430079244684843",
+		"client_id":"484689886817813568",
+		"client_secret":"EA280A66ED3918E4F0A4D75B2A04183505879D3B7E04A8B1AC08C365EE3BB71C",
+		"project_id":"736430079244684843",
+		"app_id":"103172805",
+		"api_key":"CgB6e3x9ZYW2rYsmt/fpSIiMRyKdXkbOf720i4VDEv2Xuk54eNQhZAkCFbA+FzTKC1citJ/yN7J2KVULQzD4ZqKL",
+		"package_name":"com.jutaol.nearby.dinner"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-drcn.dt.hicloud.com,datacollector-drcn.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"search":{
+			"url":"https://search-drcn.cloud.huawei.com"
+		},
+		"cloudstorage":{
+			"storage_url":"https://agc-storage-drcn.platform.dbankcloud.cn"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-drcn.ai.dbankcloud.com,ml-api-drcn.ai.dbankcloud.cn"
+		}
+	},
+	"region":"CN",
+	"configuration_version":"1.0"
+}

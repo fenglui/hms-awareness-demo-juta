@@ -15,7 +15,7 @@
  *
  */
 
-package com.huawei.hms.awareness.codelab.awareness;
+package com.jutaol.nearby.dinner.awareness;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,15 +23,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.huawei.hms.awareness.codelab.R;
-import com.huawei.hms.awareness.codelab.awareness.barrier.AmbientLightBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.BarrierCombinationActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.BeaconBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.BehaviorBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.BluetoothBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.HeadsetBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.LocationBarrierActivity;
-import com.huawei.hms.awareness.codelab.awareness.barrier.TimeBarrierActivity;
+import com.jutaol.nearby.dinner.R;
+import com.jutaol.nearby.dinner.awareness.barrier.AmbientLightBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.BarrierCombinationActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.BeaconBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.BehaviorBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.BluetoothBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.HeadsetBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.LocationBarrierActivity;
+import com.jutaol.nearby.dinner.awareness.barrier.TimeBarrierActivity;
 
 public class BarrierActivity extends AppCompatActivity implements View.OnClickListener {
     @Override

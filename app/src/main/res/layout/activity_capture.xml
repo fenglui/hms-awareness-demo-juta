@@ -61,11 +61,31 @@
             android:text="@string/awareness_getBeaconStatus" />
 
         <Button
+            android:id="@+id/capture_getWifiStatus"
+            style="@style/ButtonStyle"
+            android:text="@string/awareness_getWifiStatus" />
+
+        <Button
+            android:id="@+id/capture_getScreenStatus"
+            style="@style/ButtonStyle"
+            android:text="@string/awareness_getScreenStatus" />
+
+        <Button
+            android:id="@+id/capture_getDarkModeStatus"
+            style="@style/ButtonStyle"
+            android:text="@string/awareness_getDarkModeStatus" />
+
+        <Button
+            android:id="@+id/capture_getApplicationStatus"
+            style="@style/ButtonStyle"
+            android:text="@string/awareness_getApplicationStatus" />
+
+        <Button
             android:id="@+id/clear_log"
             style="@style/ButtonStyle"
             android:text="@string/clear_log" />
 
-        <com.huawei.hms.awareness.codelab.logger.LogView
+        <com.jutaol.nearby.dinner.logger.LogView
             android:id="@+id/logView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
