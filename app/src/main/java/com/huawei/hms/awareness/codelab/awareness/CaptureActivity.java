@@ -301,10 +301,10 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void getBeaconStatus() {
-        String namespace = "sample namespace";
-        String type = "sample type";
-        byte[] content = new byte[] {'s', 'a', 'm', 'p', 'l', 'e'};
-        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type, content);
+        String namespace = "dev736430079244684843";
+        String type = "shop";
+//      byte[] content = new byte[] {'s', 'a', 'm', 'p', 'l', 'e'};
+        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type);
         Awareness.getCaptureClient(this)
             .getBeaconStatus(filter)
             .addOnSuccessListener(new OnSuccessListener<BeaconStatusResponse>() {
