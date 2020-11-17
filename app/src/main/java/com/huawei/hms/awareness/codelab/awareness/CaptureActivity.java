@@ -304,7 +304,9 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
         String namespace = "dev736430079244684843";
         String type = "shop";
 //      byte[] content = new byte[] {'s', 'a', 'm', 'p', 'l', 'e'};
-        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type);
+        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type
+        // , content
+        );
         Awareness.getCaptureClient(this)
             .getBeaconStatus(filter)
             .addOnSuccessListener(new OnSuccessListener<BeaconStatusResponse>() {
@@ -319,7 +321,8 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                             builder.append("Beacon Data ").append(i);
                             builder.append(" namespace:").append(beaconData.getNamespace());
                             builder.append(",type:").append(beaconData.getType());
-                            builder.append(",content:").append(Arrays.toString(beaconData.getContent()));
+//                            builder.append(",content:").append(Arrays.toString(beaconData.getContent()));
+                            builder.append(",beaconId:").append(beaconData.getBeaconId());
                             builder.append(". ");
                             i++;
                         }

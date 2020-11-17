@@ -74,10 +74,12 @@ public class BeaconBarrierActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View v) {
-        String namespace = "sample namespace";
-        String type = "sample type";
-        byte[] content = new byte[]{'s', 'a', 'm', 'p', 'l', 'e'};
-        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type, content);
+        String namespace = "dev736430079244684843";
+        String type = "shop";
+        // byte[] content = new byte[]{'s', 'a', 'm', 'p', 'l', 'e'};
+        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type
+        // , content
+        );
 
         switch (v.getId()) {
             case R.id.add_beaconBarrier_discover:
