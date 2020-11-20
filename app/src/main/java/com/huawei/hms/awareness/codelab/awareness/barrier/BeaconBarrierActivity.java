@@ -25,9 +25,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ScrollView;
 
+import com.huawei.hmf.tasks.OnFailureListener;
+import com.huawei.hmf.tasks.OnSuccessListener;
+import com.huawei.hms.kit.awareness.Awareness;
+import com.huawei.hms.kit.awareness.capture.BeaconStatusResponse;
 import com.jutaol.nearby.dinner.R;
 import com.jutaol.nearby.dinner.Utils;
 import com.jutaol.nearby.dinner.logger.LogView;
@@ -35,6 +40,8 @@ import com.huawei.hms.kit.awareness.barrier.AwarenessBarrier;
 import com.huawei.hms.kit.awareness.barrier.BarrierStatus;
 import com.huawei.hms.kit.awareness.barrier.BeaconBarrier;
 import com.huawei.hms.kit.awareness.status.BeaconStatus;
+
+import java.util.List;
 
 public class BeaconBarrierActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String DISCOVER_BARRIER_LABEL = "discover beacon barrier label";
@@ -117,6 +124,49 @@ public class BeaconBarrierActivity extends AppCompatActivity implements View.OnC
         }
     }
 
+    private void getBeaconStatus() {
+        String namespace = "dev736430079244684843";
+        String type = "shop";
+//      byte[] content = new byte[] {'s', 'a', 'm', 'p', 'l', 'e'};
+        BeaconStatus.Filter filter = BeaconStatus.Filter.match(namespace, type
+                // , content
+        );
+        Awareness.getCaptureClient(this)
+                .getBeaconStatus(filter)
+                .addOnSuccessListener(new OnSuccessListener<BeaconStatusResponse>() {
+                    @Override
+                    public void onSuccess(BeaconStatusResponse beaconStatusResponse) {
+                        List<BeaconStatus.BeaconData> beaconDataList =
+                                beaconStatusResponse.getBeaconStatus().getBeaconData();
+                        if (beaconDataList != null && beaconDataList.size() != 0) {
+                            int i = 1;
+                            StringBuilder builder = new StringBuilder();
+                            for (BeaconStatus.BeaconData beaconData : beaconDataList) {
+                                builder.append("Beacon Data ").append(i);
+                                builder.append(" namespace:").append(beaconData.getNamespace());
+                                builder.append(",type:").append(beaconData.getType());
+                                builder.append(",content:").append(new String(beaconData.getContent()));
+                                builder.append(",beaconId:").append(beaconData.getBeaconId());
+                                builder.append(". ");
+                                i++;
+                            }
+                            mLogView.printLog(builder.toString());
+                        } else {
+                            mLogView.printLog("No beacon matches filters nearby.");
+                        }
+//                        scrollToBottom();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(Exception e) {
+                        mLogView.printLog("Failed to get beacon status.");
+//                        Log.e(TAG, "Failed to get beacon status.", e);
+                    }
+                });
+    }
+
+
     final class BeaconBarrierReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -127,6 +177,7 @@ public class BeaconBarrierActivity extends AppCompatActivity implements View.OnC
                 case DISCOVER_BARRIER_LABEL:
                     if (barrierPresentStatus == BarrierStatus.TRUE) {
                         mLogView.printLog("A beacon matching the filters is found.");
+                        getBeaconStatus();
                     } else if (barrierPresentStatus == BarrierStatus.FALSE) {
                         mLogView.printLog("The discover beacon barrier status is false.");
                     } else {

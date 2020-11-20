@@ -19,6 +19,7 @@ package com.jutaol.nearby.dinner.awareness;
 
 import static com.huawei.hms.kit.awareness.status.BluetoothStatus.DEVICE_CAR;
 
+import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.List;
 
@@ -321,7 +322,7 @@ public class CaptureActivity extends AppCompatActivity implements View.OnClickLi
                             builder.append("Beacon Data ").append(i);
                             builder.append(" namespace:").append(beaconData.getNamespace());
                             builder.append(",type:").append(beaconData.getType());
-//                            builder.append(",content:").append(Arrays.toString(beaconData.getContent()));
+                            builder.append(",content:").append(new String(beaconData.getContent()));
                             builder.append(",beaconId:").append(beaconData.getBeaconId());
                             builder.append(". ");
                             i++;
